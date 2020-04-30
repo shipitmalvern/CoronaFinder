@@ -1835,6 +1835,16 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
+classlist-polyfill@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/classlist-polyfill/-/classlist-polyfill-1.2.0.tgz#935bc2dfd9458a876b279617514638bcaa964a2e"
+  integrity sha1-k1vC39lFiodrJ5YXUUY4vKqWSi4=
+
+classnames@^2.2.5:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
+  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
+
 clean-stack@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/clean-stack/-/clean-stack-2.2.0.tgz#ee8472dbb129e727b31e8a10a427dee9dfe4008b"
@@ -4032,6 +4042,11 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+keycode-js@^2.0.1:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/keycode-js/-/keycode-js-2.0.3.tgz#0ef559be057847aae6c520ce03577f4a12f7e257"
+  integrity sha512-nGuOQ0zvYQFr0OOBOZS47e/ifsiuNz1pleQIFS+LX+udj3St6AvHpv55MI8DCre6Yg9D2CG/qqWbuAx7iQt9FQ==
+
 killable@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/killable/-/killable-1.0.1.tgz#4c8ce441187a061c7474fb87ca08e2a638194892"
@@ -4205,6 +4220,11 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
+
+lodash.uniqueid@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/lodash.uniqueid/-/lodash.uniqueid-4.0.1.tgz#3268f26a7c88e4f4b1758d679271814e31fa5b26"
+  integrity sha1-MmjyanyI5PSxdY1nknGBTjH6WyY=
 
 lodash@^4.0.0, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.5, lodash@~4.17.12:
   version "4.17.15"
@@ -5886,7 +5906,7 @@ promise-inflight@^1.0.1:
   resolved "https://registry.yarnpkg.com/promise-inflight/-/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
   integrity sha1-mEcocL8igTL8vdhoEputEsPAKeM=
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -6052,6 +6072,23 @@ react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-lifecycles-compat@^3.0.2:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+  integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-onclickoutside@^6.7.1:
+  version "6.9.0"
+  resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.9.0.tgz#a54bc317ae8cf6131a5d78acea55a11067f37a1f"
+  integrity sha512-8ltIY3bC7oGhj2nPAvWOGi+xGFybPNhJM0V1H8hY/whNcXgmDeaeoCMPPd8VatrpTsUWjb/vGzrmu6SrXVty3A==
+
+react-portal@^4.1.2:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-4.2.1.tgz#12c1599238c06fb08a9800f3070bea2a3f78b1a6"
+  integrity sha512-fE9kOBagwmTXZ3YGRYb4gcMy+kSA+yLO0xnPankjRlfBv4uCpFXqKPfkpsGQQR15wkZ9EssnvTOl1yMzbkxhPQ==
+  dependencies:
+    prop-types "^15.5.8"
 
 react@^16.13.1:
   version "16.13.1"
@@ -6257,6 +6294,11 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
+
+resize-observer-polyfill@^1.4.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
+  integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
 
 resolve-cwd@^2.0.0:
   version "2.0.0"
@@ -7021,6 +7063,65 @@ tar@^2.0.0:
     block-stream "*"
     fstream "^1.0.12"
     inherits "2"
+
+terra-form-field@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/terra-form-field/-/terra-form-field-4.2.0.tgz#67b90f44777409f96316745d26fa9761c94caeb2"
+  integrity sha512-o5VWC23DwYuEia75lqGO9yCdWNkCYfxoSEk0SgmVqJaOgi5gWkuCbMxPytXhHjzr4hn7D8+RXhom9zxQJf6E3Q==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.5.8"
+    terra-icon "^3.30.0"
+
+terra-form-input@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/terra-form-input/-/terra-form-input-3.2.0.tgz#608f75eb89ab0b6a24cf250e172d32256e188404"
+  integrity sha512-2d3Q5OiRQQQbNNIvjYGy5iVbWw8QCCRqezmqy4qsJsoaypfBHQ290CQncC8VRCu+CJbgvLxGNDNI53zOKUIUfQ==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.5.8"
+    terra-form-field "^4.2.0"
+    terra-icon "^3.30.0"
+
+terra-form-select@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/terra-form-select/-/terra-form-select-6.3.0.tgz#1f246eb53c6ff1d1d9c0430a57691bea2b81bfcf"
+  integrity sha512-fAJMN2EnW6Hzpy7OdTKQXrJpNuRKOd0fAnUGH7C5OiMB1jU7jMV0TLO6YI20M3biiyscQEJBDJ4P+wTeyPqK1g==
+  dependencies:
+    classnames "^2.2.5"
+    keycode-js "^2.0.1"
+    lodash.uniqueid "^4.0.1"
+    prop-types "^15.5.8"
+    react-lifecycles-compat "^3.0.2"
+    terra-form-field "^4.2.0"
+    terra-hookshot "^5.0.0"
+    terra-mixins "^1.35.0"
+
+terra-hookshot@^5.0.0:
+  version "5.27.0"
+  resolved "https://registry.yarnpkg.com/terra-hookshot/-/terra-hookshot-5.27.0.tgz#a6dbd8926782a4c8bdd1bd04d64c45633af3efa1"
+  integrity sha512-aDNc7A6n1BGUyBFm5s1hwyurBIvmGhNi8PLy7+yQwNKcntfAB7nc3G+Wlz6Np3wWCgfqs2Fkab+6czYyZexA5g==
+  dependencies:
+    classlist-polyfill "^1.2.0"
+    classnames "^2.2.5"
+    keycode-js "^2.0.1"
+    prop-types "^15.5.8"
+    react-onclickoutside "^6.7.1"
+    react-portal "^4.1.2"
+    resize-observer-polyfill "^1.4.1"
+
+terra-icon@^3.30.0:
+  version "3.30.0"
+  resolved "https://registry.yarnpkg.com/terra-icon/-/terra-icon-3.30.0.tgz#1f8a2693b0c7b9a1446d654611a85c52c372875d"
+  integrity sha512-ragOn2wU1ep7oBNzFkUR7qgixFWZ2jJLfStOCfdKY+Tynw+msSld8bkj1Fz7gbyPWTVoCPuYydw6YFiPdfjxlg==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.5.8"
+
+terra-mixins@^1.35.0:
+  version "1.35.0"
+  resolved "https://registry.yarnpkg.com/terra-mixins/-/terra-mixins-1.35.0.tgz#6e554f0c7e27710261d0ada6fdd8c2d74a601444"
+  integrity sha512-8IoAVHszSDovYVjurUF4zpDhiD4NAmOkVlOsEs1MB6V+mfm5xuZ9kCSexL5F6h0Ndyo36fKpubkYBKBpBHY5Lw==
 
 terser-webpack-plugin@^1.4.3:
   version "1.4.3"
