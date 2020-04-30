@@ -15,31 +15,36 @@ class DemographicsForm extends React.Component {
             country: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleGenderChange = this.handleGenderChange.bind(this);
+        this.handleCountryChange = this.handleCountryChange.bind(this);
+        this.handleStateChange = this.handleStateChange.bind(this);
       }
 
-    handleGenderChange (e) {
-        e.preventDefault();
-        this.setState({gender: e.target.value});
+    handleInputChange(e) {
+        const target = e.target;
+        const name = target.name;
+        this.setState({
+            [name]: target.value
+          });
     }
 
-    handleAgeChange (e) {
-        e.preventDefault();
-        this.setState({age: e.target.value});
+    handleGenderChange(e){
+        this.setState({
+            "gender": e
+        })
     }
 
-    handleZipCodeChange (e) {
-        e.preventDefault();
-        this.setState({zipCode: e.target.value});
+    handleStateChange(e){
+        this.setState({
+            "state": e
+        })
     }
 
-    handleStateChange (e) {
-        e.preventDefault();
-        this.setState({state: e.target.value});
-    }
-
-    handleCountryChange (e) {
-        e.preventDefault();
-        this.setState({country: e.target.value});
+    handleCountryChange(e){
+        this.setState({
+            "country": e
+        })
     }
 
     handleSubmit(e) {
@@ -72,7 +77,7 @@ class DemographicsForm extends React.Component {
                     label="Age"
                     type="text"
                     placeholder="Age"
-                    onChange={this.handleAgeChange}
+                    onChange={this.handleInputChange}
                     inputAttrs={{
                     name: 'age',
                     }}
@@ -82,7 +87,7 @@ class DemographicsForm extends React.Component {
                     label="Zip Code"
                     type="text"
                     placeholder="Zip Code"
-                    onChange={this.handleZipCodeChange}
+                    onChange={this.handleInputChange}
                     inputAttrs={{
                     name: 'zipCode',
                     }}
