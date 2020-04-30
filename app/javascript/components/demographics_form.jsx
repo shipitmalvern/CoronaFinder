@@ -3,6 +3,7 @@ import InputField from 'terra-form-input/lib/InputField'
 import SelectField from 'terra-form-select/lib/SelectField'
 import Button from 'terra-button'
 import { injectIntl, intlShape } from 'react-intl';
+import axios from 'axios'
 
 class DemographicsForm extends React.Component {
     constructor(props) {
@@ -12,7 +13,8 @@ class DemographicsForm extends React.Component {
             age: '',
             zipCode: '',
             state: '',
-            country: ''
+            country: '',
+            posts: []
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -48,20 +50,15 @@ class DemographicsForm extends React.Component {
     }
 
     handleSubmit(e) {
-        e.preventDefault;
-        const form = event.target;
-        const data = new FormData(form);
+        const post = {
+            age: this.state.age,
+            gender: this.state.gender
+        }
+        axios.post('/v1/demographics_form',post).then(res => {
+            console.log(res)
+            console.log(res.data)
+        });
 
-        for (let name of data.keys()) {
-            const input = form.elements[name];
-            const parserName = input.dataset.parse;
-      
-            if (parserName) {
-              const parser = inputParsers[parserName];
-              const parsedValue = parser(data.get(name));
-              data.set(name, parsedValue);
-            }
-          }
     }
     
     render () {
