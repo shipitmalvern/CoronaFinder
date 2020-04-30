@@ -1,12 +1,10 @@
 import React from 'react'
 import InputField from 'terra-form-input/lib/InputField'
 import SelectField from 'terra-form-select/lib/SelectField'
-import classNames from 'classnames/bind';
-import styles from '../FormSelectDocCommon.module.scss';
+import Button from 'terra-button'
+import { injectIntl, intlShape } from 'react-intl';
 
-const cx = classNames.bind(styles);
-
-export default class DemographicsForm extends React.Component {
+class DemographicsForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -65,7 +63,7 @@ export default class DemographicsForm extends React.Component {
         return (
         <div>
             <form onSubmit={(event) => this.handleSubmit(event)}>
-                <SelectField label="Gender" name="gender" placeholder="Gender" selectId="gender-field" onChange={this.handleGenderChange} className={cx('form-select')}>
+                <SelectField label="Gender" name="gender" placeholder="Gender" selectId="gender-field" onChange={this.handleGenderChange} className={('form-select')}>
                     <SelectField.Option value= "Male" display="Male"/>
                     <SelectField.Option value= "Female" display="Female"/>
                 </SelectField>
@@ -89,15 +87,16 @@ export default class DemographicsForm extends React.Component {
                     name: 'zipCode',
                     }}
                 />
-                <SelectField label="State" name="state" placeholder="State" selectId="state-field" onChange={this.handleStateChange} className={cx('form-select')}>
+                <SelectField label="State" name="state" placeholder="State" selectId="state-field" onChange={this.handleStateChange} className={('form-select')}>
                     <SelectField.Option value= "PA" display="PA"/>
                 </SelectField>
-                <SelectField label="Country" name="country" placeholder="Country" selectId="country-field" onChange={this.handleCountryChange} className={cx('form-select')}>
+                <SelectField label="Country" name="country" placeholder="Country" selectId="country-field" onChange={this.handleCountryChange} className={('form-select')}>
                     <SelectField.Option value= "US" display="US"/>
                 </SelectField>
-                <Button text="Submit" type="submit" className={cx('button')} />
+                <Button text="Submit" type="submit" className={('button')} />
             </form>        
         </div>
         )
     }
     }
+    export default injectIntl(DemographicsForm);

@@ -6,11 +6,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import DemographicsForm from '../components/demographics_form'
-
+import TraigeComponent from '../components/traige_component'
+import { injectIntl, intlShape, IntlProvider } from 'react-intl';
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <DemographicsForm/>,
+    <IntlProvider locale="en">
+    <DemographicsForm/>
+    </IntlProvider>,
     document.body.appendChild(document.createElement('div')),
   )
 })
