@@ -39,3 +39,4 @@ vendor/bundle/bin/byebug
 
 vender/*
 Gemfile.lock
+package-lock.json
