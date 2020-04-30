@@ -36,5 +36,5 @@ yarn-debug.log*
 .yarn-integrity
 vendor/bundle/bin/byebug
 
-vender/
+vender/*
 Gemfile.lock
