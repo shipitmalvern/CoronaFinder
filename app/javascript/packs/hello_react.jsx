@@ -5,9 +5,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
+import TraigeComponent from '../components/traige_component'
 
 const Hello = props => (
-  <div>Hello {props.name}!</div>
+  <div>Hello World!{props.name}!</div>
 )
 
 Hello.defaultProps = {
@@ -20,7 +21,7 @@ Hello.propTypes = {
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="React" />,
+    <TraigeComponent/>,
     document.body.appendChild(document.createElement('div')),
   )
 })
