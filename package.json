@@ -11,8 +11,9 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "terra-form-input": "^3.2.0",
-    "terra-form-select": "^6.3.0",
+    "react-router": "^5.1.2",
+    "terra-card": "^3.28.0",
+    "terra-content-container": "^3.27.0",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
