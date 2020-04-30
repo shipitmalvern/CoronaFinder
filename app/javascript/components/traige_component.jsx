@@ -7,10 +7,10 @@ class TraigeComponent extends React.Component{
     render(){
       return(
       <Card>
-        <Card.Body isContentCentered >
+        <Card.Body isContentCentered hasPaddingVertical={true} hasPaddingHorizontal={true} >
           {this.props.label}
         </Card.Body>
-        <Card.Body >
+        <Card.Body hasPaddingVertical={true} hasPaddingHorizontal={true}>
           {this.props.value}
         </Card.Body>
       </Card>
