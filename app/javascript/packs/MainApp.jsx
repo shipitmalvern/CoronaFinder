@@ -7,17 +7,6 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import TraigeComponent from '../components/traige_component'
 
-const Hello = props => (
-  <div>Hello World!{props.name}!</div>
-)
-
-Hello.defaultProps = {
-  name: 'David'
-}
-
-Hello.propTypes = {
-  name: PropTypes.string
-}
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(

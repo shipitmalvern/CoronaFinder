@@ -1,13 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Card from 'terra-card/lib/Card';
+import ContentContainer from 'terra-content-container';
+import classNames from 'classnames/bind';
+import styles from './ContentContainerDocCommon.module.scss';
 
-class TraigeComponent extends React.Component{
+const TraigeComponent = () => (
+    <Card>
+      <Card.Body isContentCentered>
+         Traige Results
+      </Card.Body>
+    </Card>
+  );
 
-    render(){
-        return (
-            <React.Fragment>
-                Greeting: Hello
-            </React.Fragment>
-        )
-    }
-}
+export default TraigeComponent;

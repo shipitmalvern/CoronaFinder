@@ -7349,6 +7349,15 @@ terra-card@^3.28.0:
     terra-theme-context "^1.0.0"
     terra-visually-hidden-text "^2.26.0"
 
+terra-content-container@^3.27.0:
+  version "3.27.0"
+  resolved "https://registry.yarnpkg.com/terra-content-container/-/terra-content-container-3.27.0.tgz#03c678a0ce96a1ecbd8d50ae813126a3e1572910"
+  integrity sha512-XBqkwgoAsJL46M5mpP8kmqUu9wV4mjMdIQ6S7jHpDUe4Dg9T11QXXcBsaftmO/n7vNxCRx/tM5QP7gulPnHT6A==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.5.8"
+    terra-scroll "^2.25.0"
+
 terra-doc-template@^2.25.0:
   version "2.25.0"
   resolved "https://registry.yarnpkg.com/terra-doc-template/-/terra-doc-template-2.25.0.tgz#8934262d61e8c2be025fb9c3ca2c3ab60c10bec0"
@@ -7381,6 +7390,14 @@ terra-props-table@^2.46.0:
     prop-types "^15.5.8"
     react-docgen "^2.15.0"
     terra-markdown "^2.39.0"
+
+terra-scroll@^2.25.0:
+  version "2.25.0"
+  resolved "https://registry.yarnpkg.com/terra-scroll/-/terra-scroll-2.25.0.tgz#e100eb7ed00ee1e6d41b57f8f137a7ddeae80417"
+  integrity sha512-DL+3wA4eXee7mvLytXbkzdshw8wlApttQUFwaAr6QKua9Ogrip1elWBdEFjQEaDH3It4o+PaPH6BjGeDJSS2zg==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.5.8"
 
 terra-theme-context@^1.0.0:
   version "1.1.0"
