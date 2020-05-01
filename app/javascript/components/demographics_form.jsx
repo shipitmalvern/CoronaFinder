@@ -74,7 +74,7 @@ class DemographicsForm extends React.Component {
 	 
     render () {
         return (
-        <React.Fragment>
+        <div>
 				<h1>Please fill out this form for Covid'19 Assesment:</h1> 
             <form onSubmit={(event) => this.handleSubmit(event)}>
                 <SelectField label="Gender" name="gender" placeholder="Gender" selectId="gender-field" onChange={this.handleGenderChange} required className={('form-select')}>
@@ -171,7 +171,7 @@ class DemographicsForm extends React.Component {
 				
 				{this.getRequest()}
 				    
-        </React.Fragment>
+        </div>
         )
     }
     }
