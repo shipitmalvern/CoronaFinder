@@ -56,10 +56,9 @@ class DemographicsForm extends React.Component {
         }
         console.log("Hiya")
         axios.post('/v1/demographics_form',post).then(res => {
-            console.log("ABCDEF")
-            console.log(res)
-            console.log(res.data)
+            console.log(res.data.body)
         });
+        
 
     }
     
