@@ -7,17 +7,26 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
+    "axios": "^0.19.2",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-intl": "2.8.0",
     "react-router": "^5.1.2",
+    "redux-form": "^8.3.5",
+    "terra-base": "^5.33.0",
+    "terra-button": "^3.37.0",
     "terra-card": "^3.28.0",
     "terra-content-container": "^3.27.0",
+    "terra-form-field": "^4.2.0",
+    "terra-form-input": "^3.2.0",
+    "terra-form-select": "^6.3.0",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@types/react-intl": "^3.0.0",
     "webpack-dev-server": "^3.10.3"
   }
 }
