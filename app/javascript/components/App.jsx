@@ -1,7 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import TraigeContainer from '../containers/Triage'
 import DemographicsForm from './demographics_form'
+import {Provider} from 'react-redux'
+
 
 class App extends React.Component{
 
@@ -9,13 +12,12 @@ class App extends React.Component{
         return(
             <BrowserRouter>
                 <Switch>
-                    <Route exact path ="/home" render={() => <DemographicsForm/>}/>
-
+                    <Route exact path ="/demographic" render={() => <DemographicsForm/>}/>
+                    <Route exact path ="/traige" render={() => <TraigeContainer/>}/>
                 </Switch>
             </BrowserRouter>
         )
     }
+}
 
-
-
-} 
+export default App;
