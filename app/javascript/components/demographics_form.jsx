@@ -58,7 +58,7 @@ class DemographicsForm extends React.Component {
         axios.post('/v1/demographics_form',post).then(res => {
             console.log(res.data.body)
         });
-        
+
 
     }
     
@@ -66,7 +66,7 @@ class DemographicsForm extends React.Component {
         return (
         <div>
             <form onSubmit={(event) => this.handleSubmit(event)}>
-                <SelectField label="Gender" name="gender" placeholder="Gender" selectId="gender-field" onChange={this.handleGenderChange} className={('form-select')}>
+                <SelectField label="Gender" name="gender" placeholder="Gender" selectId="gender-field" onChange={this.handleGenderChange} required className={('form-select')}>
                     <SelectField.Option value= "male" display="Male"/>
                     <SelectField.Option value= "female" display="Female"/>
                 </SelectField>
@@ -75,6 +75,7 @@ class DemographicsForm extends React.Component {
                     label="Age"
                     type="text"
                     placeholder="Age"
+                    required
                     onChange={this.handleInputChange}
                     inputAttrs={{
                     name: 'age',

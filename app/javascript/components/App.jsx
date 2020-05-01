@@ -9,7 +9,7 @@ class App extends React.Component{
         return(
             <BrowserRouter>
                 <Switch>
-                    <Route exact path ="/" render={() => <DemographicsForm/>}/>
+                    <Route exact path ="/home" render={() => <DemographicsForm/>}/>
 
                 </Switch>
             </BrowserRouter>
