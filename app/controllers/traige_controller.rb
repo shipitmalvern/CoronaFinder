@@ -1,18 +1,16 @@
 class TraigeController < ApplicationController
 
         def index
-            render json: {
-                "description": "Your symptoms currently do not suggest that you have COVID-19. However, according to the WHO and CDC guidelines, it is strongly recommended that you keep yourself separated from others for the next 14 days.",
-                "label": "Quarantine",
-                "serious": [
-                    {
-                        "common_name": "Living or caring for COVID-19 suspected person",
-                        "id": "p_12",
-                        "is_emergency": false,
-                        "name": "Living or caring for COVID-19 suspected person"
-                    }
-                ],
-                "triage_level": "quarantine"
-            }
+            #make api call to traige and get result back 
+            #create evidence array from params
+            evidence = params[:evidence]
+            response = Faraday.post('https://api.infermedica.com/covid19/traige') do |req|
+                req.headers['Content-Type'] = 'application/json'
+                req.headers['App-Id'] = 'eb79962e'
+                req.headers['App-Key'] = '2de88eb85d8e113ff6e8bc340fa9cc14'
+                req.body = {sex: params[:gender], age: params[:age].to_i, evidence: [evidence]}.to_json
+            end
+    
+            render json: res.body
         end
 end
