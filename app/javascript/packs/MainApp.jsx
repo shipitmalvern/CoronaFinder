@@ -6,17 +6,17 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import App from '../components/App'
-import DemographicsForm from '../components/demographics_form'
-import TraigeComponent from '../components/traige_component'
-import { injectIntl, intlShape, IntlProvider } from 'react-intl';
-import {createStore} from 'redux'
+import {createStore, applyMiddleware, compose} from 'redux'
 import allReducers from '../reducers/index'
 import {Provider} from 'react-redux'
-import { composeWithDevTools } from "redux-devtools-extension";
+
+
+
+
 
 const store = createStore(
   allReducers,
-  composeWithDevTools()
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 );
 
 document.addEventListener('DOMContentLoaded', () => {

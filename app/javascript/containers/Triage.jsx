@@ -5,15 +5,20 @@ import TraigeComponent from "../components/traige_component"
 import axios from 'axios'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
+import Button from 'terra-button'
+import getTraige from '../actions/index'
+
 class TriageContainer extends React.Component{    
+
     render() {
         return(
-            <div>
+            <div> 
                 <TraigeHeaderComponent/>
                 <TraigeComponent label= "Description" value = {this.props.userResult.description}/>
                 <TraigeComponent label = "Label "   value = {this.props.userResult.label}/>
                 <TraigeComponent label = "Triage Level " value = {this.props.userResult.triage_level} />
                 <TraigeComponent label = "Seriousness " value = {this.props.userResult.serious[0].common_name}/>
+                <Button text="Submit" type="submit" onSubmit={this.props.getTraige} />
             </div>
         )
     }
@@ -24,4 +29,10 @@ function mapStateToProps(state){
         userResult: state.userResult
     };
 }
-export default connect(mapStateToProps)(TriageContainer);
+
+//Needed for actions/reducers
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({getTraige: getTraige()}, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TriageContainer);

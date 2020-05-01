@@ -98,7 +98,7 @@ class DemographicsForm extends React.Component {
                 <SelectField label="Country" name="country" placeholder="Country" selectId="country-field" onChange={this.handleCountryChange} className={('form-select')}>
                     <SelectField.Option value= "US" display="US"/>
                 </SelectField>
-                <Button text="Submit" type="submit" className={('button')} />
+                <Button text="Submit" type="submit" onSubmit   className={('button')} />
             </form>        
         </div>
         )
