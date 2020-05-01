@@ -12,5 +12,13 @@ class V1::DemographicsFormController < ApplicationController
         
         render json: res.body
     end
+    def index
+        #make api call to news api and get result back 
+        #create evidence array from params
+        response = Faraday.get('https://newsapi.org/v2/top-headlines?country=us&q=COVID&from=2020-04-27&sortBy=publishedAt&apiKey=e5aff38f78b34a1b80954fa5967d690c&limit=5') do |req|
+            req.headers['Content-Type'] = 'application/json'
+        end
+        render json: response.body
+    end
 
 end

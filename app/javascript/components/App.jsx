@@ -12,7 +12,7 @@ class App extends React.Component{
         return(
             <BrowserRouter>
                 <Switch>
-                    <Route exact path ="/demographic" render={() => <DemographicsForm/>}/>
+                    <Route exact path ="/" render={() => <DemographicsForm/>}/>
                     <Route exact path ="/traige" render={() => <TraigeContainer/>}/>
                 </Switch>
             </BrowserRouter>
