@@ -1,4 +1,4 @@
-class V1::TraigeController < ApplicationController
+class TraigeController < ApplicationController
 
         def index
             render json: {
