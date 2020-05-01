@@ -5,22 +5,7 @@ import TraigeComponent from "../components/traige_component"
 import axios from 'axios'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-class TriageContainer extends React.Component{
-
-    // constructor(props){
-    //     super(props)
-    //     this.getResult = this.getResult.bind(this);
-    // }
-    // getResult(){
-    //     try {
-    //         const response = axios.get('/traige');
-    //         console.log(response);
-    //       } catch (error) {
-    //         console.error(error);
-    //       }
-    //       return response
-    //     }
-    
+class TriageContainer extends React.Component{    
     render() {
         return(
             <div>
@@ -33,11 +18,10 @@ class TriageContainer extends React.Component{
         )
     }
 }
+//Grabs user result state and maps to this component, will need questionnaire component to make api call and update traige result
 function mapStateToProps(state){
     return{
         userResult: state.userResult
     };
 }
-
-
 export default connect(mapStateToProps)(TriageContainer);
