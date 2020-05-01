@@ -26,16 +26,16 @@ class TriageContainer extends React.Component{
             <div>
                 <TraigeHeaderComponent/>
                 <TraigeComponent label= "Description" value = {this.props.userResult.description}/>
-                <TraigeComponent label = "Label "   value = "Label Value Will Go Here"/>
-                <TraigeComponent label = "Triage Level " value = "Triage Value Will Go Here" />
-                <TraigeComponent label = "Seriousness " value = "Seriousness Value Will Go Here"/>
+                <TraigeComponent label = "Label "   value = {this.props.userResult.label}/>
+                <TraigeComponent label = "Triage Level " value = {this.props.userResult.triage_level} />
+                <TraigeComponent label = "Seriousness " value = {this.props.userResult.serious[0].common_name}/>
             </div>
         )
     }
 }
 function mapStateToProps(state){
     return{
-        userResult: state.userResults
+        userResult: state.userResult
     };
 }
 
