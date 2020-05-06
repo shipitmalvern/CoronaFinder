@@ -8,7 +8,7 @@ class TraigeController < ApplicationController
             
             mock_triage_response= {
                 "sex": "male",
-                "age": 32,
+                "age": 65,
                 "evidence": [
                            {"id": "p_16", "choice_id": "absent"},
                            {"id": "p_17", "choice_id": "present"},
@@ -31,13 +31,14 @@ class TraigeController < ApplicationController
                     ]
               }
             
-            response = Faraday.post('https://api.infermedica.com/covid19/traige') do |req|
+            response = Faraday.post('https://api.infermedica.com/covid19/triage') do |req|
                 req.headers['Content-Type'] = 'application/json'
                 req.headers['App-Id'] = 'eb79962e'
                 req.headers['App-Key'] = '2de88eb85d8e113ff6e8bc340fa9cc14'
                 req.body = mock_triage_response.to_json
             end
-            binding.pry
-            render json: res.body
+            
+            # binding.pry
+            render json: response.body
         end
 end

@@ -17,8 +17,8 @@ class TriageContainer extends React.Component{
                 <TraigeComponent label= "Description" value = {this.props.userResult.description}/>
                 <TraigeComponent label = "Label "   value = {this.props.userResult.label}/>
                 <TraigeComponent label = "Triage Level " value = {this.props.userResult.triage_level} />
-                <TraigeComponent label = "Seriousness " value = {this.props.userResult.serious[0].common_name}/>
-                <Button text="Submit" type="submit" onSubmit={this.props.getTraige} />
+                {/* <TraigeComponent label = "Seriousness " value = {this.props.userResult.serious[0].common_name}/> */}
+                <Button text="Submit" type="submit" onClick={() => this.props.getTraige()} />
             </div>
         )
     }
@@ -31,8 +31,6 @@ function mapStateToProps(state){
 }
 
 //Needed for actions/reducers
-function mapDispatchToProps(dispatch){
-    return bindActionCreators({getTraige: getTraige()}, dispatch)
-}
+const mapDispatchToProps = { getTraige };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TriageContainer);

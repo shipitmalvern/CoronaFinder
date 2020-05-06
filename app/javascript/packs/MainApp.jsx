@@ -11,21 +11,16 @@ import allReducers from '../reducers/index'
 import {Provider} from 'react-redux'
 
 
-
-
-
 const store = createStore(
-  allReducers,
-  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  allReducers, 
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <IntlProvider locale="en">
       <Provider store ={store}>
           <App/>
-      </Provider>
-    </IntlProvider>,
+      </Provider>,
     document.body.appendChild(document.createElement('div')),
   )
 })
