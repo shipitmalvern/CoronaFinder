@@ -12,14 +12,12 @@ class App extends React.Component{
         return(
             <BrowserRouter>
                 <Switch>
-                    <Route exact path ="/demographics" render={() => <DemographicsForm/>}/>
-                    <Route exact path ="/Result" render={() => <TraigeContainer/>}/>
+                    <Route exact path ="/demographic" render={() => <DemographicsForm/>}/>
+                    <Route exact path ="/traige" render={() => <TraigeContainer/>}/>
                 </Switch>
             </BrowserRouter>
         )
     }
 }
-
-
 
 export default App;

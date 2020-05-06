@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.0'
 
+gem 'faraday', '~>1.0.0'
 # Handle procfile
 gem 'foreman', '~> 0.87.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
