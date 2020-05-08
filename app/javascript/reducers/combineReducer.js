@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux'
-import UserResultReducer from './getResult_reducer'
+import UserResultReducer from './userResult'
 
 const allReducers = combineReducers({
     userResult: UserResultReducer

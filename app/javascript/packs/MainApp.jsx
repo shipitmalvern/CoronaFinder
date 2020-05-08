@@ -6,15 +6,18 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import App from '../components/App'
-import {createStore, applyMiddleware, compose} from 'redux'
-import allReducers from '../reducers/index'
+import allReducers from '../reducers/combineReducer'
 import {Provider} from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import thunkMiddleware from 'redux-thunk'
 
 
 const store = createStore(
   allReducers, 
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+  composeWithDevTools(applyMiddleware(thunkMiddleware))
+)
+
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(

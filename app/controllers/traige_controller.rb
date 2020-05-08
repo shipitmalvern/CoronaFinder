@@ -8,18 +8,22 @@ class TraigeController < ApplicationController
             
             mock_triage_response= {
                 "sex": "male",
-                "age": 65,
+                "age": 32,
                 "evidence": [
-                           {"id": "p_16", "choice_id": "absent"},
+                           {"id": "p_16", "choice_id": "present"},
                            {"id": "p_17", "choice_id": "present"},
-                           {"id": "p_18", "choice_id": "absent"},
-                           {"id": "p_19", "choice_id": "absent"},
-                           {"id": "p_20", "choice_id": "absent"},
-                           {"id": "p_21", "choice_id": "absent"},
-                           {"id": "p_22", "choice_id": "absent"},
-                           {"id": "s_0", "choice_id": "absent"},
+                           {"id": "p_18", "choice_id": "present"},
+                           {"id": "p_19", "choice_id": "present"},
+                           {"id": "p_20", "choice_id": "present"},
+                           {"id": "p_21", "choice_id": "present"},
+                           {"id": "p_22", "choice_id": "present"},
+                           {"id": "s_0", "choice_id": "present"},
                            {"id": "s_1", "choice_id": "absent"},
                            {"id": "s_2", "choice_id": "absent"},
+                           {"id": "s_5", "choice_id": "present"},
+                           {"id": "s_12", "choice_id": "absent"},
+                           {"id": "s_13", "choice_id": "absent"},
+                           {"id": "s_14", "choice_id": "absent"},
                            {"id": "s_15", "choice_id": "present"},
                            {"id": "s_16", "choice_id": "present"},
                            {"id": "s_17", "choice_id": "absent"},
@@ -27,10 +31,15 @@ class TraigeController < ApplicationController
                            {"id": "s_19", "choice_id": "absent"},
                            {"id": "s_20", "choice_id": "absent"},
                            {"id": "s_21", "choice_id": "absent"},
-                           {"id": "p_12", "choice_id": "present"}
+                           {"id": "p_12", "choice_id": "absent"},
+                           {"id": "p_15", "choice_id": "present"},
+                           {"id": "p_24", "choice_id": "absent"},
+                           {"id": "p_23", "choice_id": "absent"},
+                           {"id": "s_24", "choice_id": "absent"}
+                
                     ]
               }
-            
+              
             response = Faraday.post('https://api.infermedica.com/covid19/triage') do |req|
                 req.headers['Content-Type'] = 'application/json'
                 req.headers['App-Id'] = 'eb79962e'
@@ -38,7 +47,6 @@ class TraigeController < ApplicationController
                 req.body = mock_triage_response.to_json
             end
             
-            # binding.pry
             render json: response.body
         end
 end

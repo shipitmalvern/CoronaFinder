@@ -3,7 +3,9 @@ import PropTypes from "prop-types"
 import Card from 'terra-card/lib/Card';
 
 class TraigeComponent extends React.Component{
-
+  constructor(props){
+    super(props)
+  }
     render(){
       return(
       <Card>

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
    root 'pages#index'
+   resources :traige, only: [:index]
+
     namespace :v1, defaults: { format: 'json'} do
-       get 'traige', to: 'traige#index'
        resources :demographics_form, only: [:create]
     end
 
