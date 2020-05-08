@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import TraigeContainer from '../containers/Triage'
 import DemographicsForm from './demographics_form'
+import SelectingFormValuesForm from './demo_form'
 import {Provider} from 'react-redux'
 import {connect} from 'react-redux'
 
@@ -17,7 +18,7 @@ class App extends React.Component{
         return(
             <BrowserRouter>
                 <Switch>
-                    <Route exact path ="/demographic" render={() => <DemographicsForm/>}/>
+                    <Route exact path ="/demographic" render={() => <SelectingFormValuesForm/>}/>
                     <Route exact path ="/result" render={() => <TraigeContainer/>}/>
                 </Switch>
             </BrowserRouter>

@@ -1,0 +1,8 @@
+.form {
+  height: 100%;
+  width: 100%;
+  background-color: aqua;
+  padding: 50px 50px 50px 50px;
+  border-style: solid;
+  border-width: 5px;
+}
