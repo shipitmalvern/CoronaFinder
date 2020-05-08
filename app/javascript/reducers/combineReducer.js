@@ -7,6 +7,7 @@ const allReducers = combineReducers({
     userResult: UserResultReducer,
     questionsData: questionsData,
     form: formReducer
+
 })
 
 export default allReducers;

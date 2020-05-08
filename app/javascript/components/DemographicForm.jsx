@@ -1,19 +1,16 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import getQuestions from '../actions/getQuestions'
+import {withRouter} from 'react-router'
 
-class SimpleForm extends React.Component{
+class DemographicForm extends React.Component{
   constructor(props){
       super(props)
-      this.handleSubmitForm = this.handleSubmitForm.bind(this)
   }
 
-  handleSubmitForm(){
-    console.log("Demographic Form Submitted")
-  }
 render(){
   return (
-    <form className= "form" onSubmit={this.handleSubmitForm}>
+    <form className= "form" onSubmit={this.props.handleSubmit}>
     <fieldset>
     <legend>Demographics:</legend>
       <div>
@@ -51,7 +48,7 @@ render(){
         </div>
       </div>
       <div>
-        <button type="submit" onClick={()=> dispatch(getQuestions)} disabled={this.props.pristine || this.props.submitting}>
+        <button type="submit" disabled={this.props.pristine || this.props.submitting}>
           Submit
         </button>
         <button type="button" disabled={this.props.pristine || this.props.submitting} onClick={this.props.reset}>
@@ -64,6 +61,6 @@ render(){
 }
 }
 
-export default reduxForm({
-  form: 'simple' // a unique identifier for this form
-})(SimpleForm);
+export default withRouter(reduxForm({
+  form: 'demographic' // a unique identifier for this form
+})(DemographicForm));

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import PropTypes from "prop-types"
+import {withRouter} from 'react-router'
 
 class Questionnaire extends React.Component{
     constructor(props){
@@ -41,6 +42,6 @@ render(){
   )
 }
 }
-export default reduxForm({
+export default withRouter(reduxForm({
   form: 'questionnaire' // a unique identifier for this form
-})(Questionnaire)
+})(Questionnaire))

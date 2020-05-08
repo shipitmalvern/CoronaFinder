@@ -1,7 +1,7 @@
 import React,{ useEffect } from "react"
 import PropTypes from "prop-types"
-import TraigeHeaderComponent from "../components/traige_header_component"
-import TraigeComponent from "../components/traige_component"
+import TraigeHeaderComponent from "../components/TraigeHeader"
+import TraigeComponent from "../components/Traige"
 import {connect} from 'react-redux'
 import Button from 'terra-button'
 import fetchTraige from '../actions/getTraige'
