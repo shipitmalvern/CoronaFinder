@@ -13,7 +13,7 @@ class QuestionnaireContainer extends React.Component{
         super(props);
         this.handleSubmit= this.handleSubmit.bind(this);
     }
-
+    
     handleSubmit(){
         console.log("Questions Submitted!")
         this.props.getQuestions(this.props.state)
@@ -23,7 +23,7 @@ class QuestionnaireContainer extends React.Component{
     render() {
         return(
             <div> 
-            <Questionnaire handleSubmit= {this.handleSubmit}/>
+            <Questionnaire state = {this.props.state} handleSubmit= {this.handleSubmit}/>
             </div>
         )
     }

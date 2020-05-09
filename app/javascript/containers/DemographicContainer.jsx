@@ -23,7 +23,6 @@ class DemographicContainer extends React.Component{
         this.props.history.push('/questions')
         
     }
-   
     render() {
         return(
             <div> 
