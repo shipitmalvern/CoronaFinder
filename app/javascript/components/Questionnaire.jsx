@@ -10,9 +10,6 @@ class Questionnaire extends React.Component {
     super(props);
   }
   render() {
-    if (this.props.state.questionsData.loading == true) {
-     
-    } else {
       //Three scenarios, single, group-single, group-multiple
       const questionsData = this.props.state.questionsData;
 
@@ -52,7 +49,6 @@ class Questionnaire extends React.Component {
         );
       }
     }
-  }
 }
 
 export default withRouter(
