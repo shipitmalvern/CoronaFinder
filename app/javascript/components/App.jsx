@@ -5,7 +5,8 @@ import TraigeContainer from '../containers/TraigeContainer'
 import SelectingFormValuesForm from './DemographicForm'
 import {Provider} from 'react-redux'
 import {connect} from 'react-redux'
-import QuestionForm from './Questionnaire'
+import QuestionnaireContainer from '../containers/QuestionnaireContainer'
+
 import DemographicContainer from '../containers/DemographicContainer'
 import {withRouter} from 'react-router'
 
@@ -20,7 +21,7 @@ class App extends React.Component{
             <BrowserRouter>
                 <Switch>
                     <Route exact path ="/demographics" render={() => <DemographicContainer/>}/>
-                    <Route exact path ="/questions" render={() => <QuestionForm/>}/>
+                    <Route exact path ="/questions" render={() => <QuestionnaireContainer/>}/>
                     <Route exact path ="/result" render={() => <TraigeContainer/>}/>
                 </Switch>
             </BrowserRouter>

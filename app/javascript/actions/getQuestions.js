@@ -24,8 +24,8 @@ const fetchQuestion = (state) => {
    //We can return a function 
    console.log("Fetching Questions")
    const body = {
-       sex: state.form.demographics.values.sex,
-       age: state.form.demographics.values.age,
+       sex: state.demographics.sex,
+       age: state.demographics.age,
        evidences: []
    }
     return function(dispatch) {

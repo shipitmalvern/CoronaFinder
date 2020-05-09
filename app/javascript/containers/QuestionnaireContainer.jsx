@@ -17,7 +17,7 @@ class QuestionnaireContainer extends React.Component{
     handleSubmit(){
         console.log("Questions Submitted!")
         this.props.getQuestions(this.props.state)
-        this.props.history.push('/questions')
+        this.props.history.push('/result')
         
     }
     render() {
@@ -42,4 +42,4 @@ const mapActionsToProps = ( dispatch) => {
   }
 
 
-export default withRouter(connect(mapStateToProps, mapActionsToProps)(DemographicContainer));
+export default withRouter(connect(mapStateToProps, mapActionsToProps)(QuestionnaireContainer));
