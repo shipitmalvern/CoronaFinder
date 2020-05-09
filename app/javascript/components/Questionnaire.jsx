@@ -11,15 +11,7 @@ class Questionnaire extends React.Component {
   }
   render() {
     if (this.props.state.questionsData.loading == true) {
-      const styles ={
-        position: "absolute",
-        top: "0",
-        right: "0",
-        bottom: "0",
-        left: "0",
-        background: "rgb(53, 126, 221)"
-      }
-      return <div style={styles}><ReactLoading type="bubbles" color="#fff" height="70%" width="70%"/> </div>
+     
     } else {
       //Three scenarios, single, group-single, group-multiple
       const questionsData = this.props.state.questionsData;
