@@ -3,7 +3,7 @@ import { Field, reduxForm } from "redux-form";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router";
 import Question from "../components/Question";
-import Loading from "../components/Loading";
+import ReactLoading from 'react-loading';
 
 class Questionnaire extends React.Component {
   constructor(props) {
@@ -11,7 +11,15 @@ class Questionnaire extends React.Component {
   }
   render() {
     if (this.props.state.questionsData.loading == true) {
-      return <Loading />;
+      const styles ={
+        position: "absolute",
+        top: "0",
+        right: "0",
+        bottom: "0",
+        left: "0",
+        background: "rgb(53, 126, 221)"
+      }
+      return <div style={styles}><ReactLoading type="bubbles" color="#fff" height="70%" width="70%"/> </div>
     } else {
       //Three scenarios, single, group-single, group-multiple
       const questionsData = this.props.state.questionsData;
@@ -19,14 +27,8 @@ class Questionnaire extends React.Component {
       if (questionsData.should_stop == true) {
         this.props.history.push("/traige");
       } else {
-        if (questionsData.questions == undefined) {
-          return (
-            <form className="form" onSubmit={this.props.handleSubmit}>
-              <fieldset>
-                <legend>Questions:</legend>
-              </fieldset>
-            </form>
-          );
+        if (this.props.state.questionsData.questions == undefined) {
+          return <ReactLoading type="balls" color="#fff"/>;
         }
         return (
           <form className="form" onSubmit={this.props.handleSubmit}>
@@ -40,6 +42,21 @@ class Questionnaire extends React.Component {
                 return <Question question={question} index={i} />;
               })}
             </fieldset>
+            <div>
+              <button
+                type="submit"
+                disabled={this.props.pristine || this.props.submitting}
+              >
+                Submit
+              </button>
+              <button
+                type="button"
+                disabled={this.props.pristine || this.props.submitting}
+                onClick={this.props.reset}
+              >
+                Clear Values
+              </button>
+            </div>
           </form>
         );
       }

@@ -17,7 +17,7 @@ class QuestionnaireContainer extends React.Component{
     handleSubmit(){
         console.log("Questions Submitted!")
         this.props.getQuestions(this.props.state)
-        this.props.history.push('/result')
+        this.props.history.push('/questions')
         
     }
     render() {
