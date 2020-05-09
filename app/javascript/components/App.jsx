@@ -9,19 +9,18 @@ import QuestionnaireContainer from '../containers/QuestionnaireContainer'
 
 import DemographicContainer from '../containers/DemographicContainer'
 import {withRouter} from 'react-router'
-
+import Loading from '../components/Loading'
 class App extends React.Component{
-
     constructor(props){
         super(props)
     }
-
     render(){
         return(
             <BrowserRouter>
                 <Switch>
                     <Route exact path ="/demographics" render={() => <DemographicContainer/>}/>
                     <Route exact path ="/questions" render={() => <QuestionnaireContainer/>}/>
+                    <Route exact path ="/loading" render={() => <Loading/>}/>
                     <Route exact path ="/result" render={() => <TraigeContainer/>}/>
                 </Switch>
             </BrowserRouter>

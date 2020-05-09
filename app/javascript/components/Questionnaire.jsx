@@ -26,7 +26,6 @@ class Questionnaire extends React.Component {
           <form className="form" onSubmit={this.props.handleSubmit}>
             <fieldset>
               <legend>Questions:</legend>
-              {console.log(questionsData.questions.question.items)}
               {questionsData.questions.question.items.map(function (
                 question,
                 i

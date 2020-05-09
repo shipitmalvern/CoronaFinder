@@ -2,7 +2,7 @@ import React from 'react'
 import { Field, reduxForm } from "redux-form";
 
 const Question = (props) => { 
-    console.log(props)
+
     return (
         <div key={props.index}>
             <label>{props.question.name}</label>

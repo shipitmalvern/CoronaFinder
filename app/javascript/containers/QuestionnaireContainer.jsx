@@ -14,12 +14,11 @@ class QuestionnaireContainer extends React.Component{
         super(props);
         this.handleSubmit= this.handleSubmit.bind(this);
     }
-    
     handleSubmit(){
         console.log("Questions Submitted!")
         this.props.getQuestions(this.props.state)
         this.props.updateSymptoms(this.props.state)
-        this.props.history.push('/result')
+        this.props.history.push('/loading')
     }
     render() {
         return(

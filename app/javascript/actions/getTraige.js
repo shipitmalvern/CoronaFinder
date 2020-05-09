@@ -28,7 +28,7 @@ const fetchTraige = (dispatch) => {
             .then(response=> {
                 //successful
                 const data = response.data
-                console.log(response)
+                
                 dispatch(fetchTraigeRequestSuccess(data))
             })
             .catch(error => {

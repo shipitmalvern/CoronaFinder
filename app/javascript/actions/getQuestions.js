@@ -28,7 +28,7 @@ const fetchQuestion = (state) => {
   };
   var body;
   //Means first time getting questions
-  if (state.demographics.sex == undefined) {
+  if (state.TraigeResponse.sex == undefined) {
     body = {
       sex: state.form.demographic.values.sex,
       age: state.form.demographic.values.age,
@@ -37,12 +37,17 @@ const fetchQuestion = (state) => {
   } else {
     //Means other time getting questions
     body = {
-      sex: state.demographics.sex,
-      age: state.demographics.age,
-      evidence: [],
-    };
+      sex: state.TraigeResponse.sex,
+      age: state.TraigeResponse.age,
+      evidence: state.TraigeResponse.evidence.slice(0)
+    }
+    //Push in current answers 
+    for (let [key, value] of Object.entries(state.form.questionnaire.values)) {
+      console.log(key)
+      console.log(value)
+      body.evidence.push({"id":key, "choice_id":value})
+   }
   }
-  console.log(body);
   return function (dispatch) {
     dispatch(fetchQuestionRequest);
     axios
