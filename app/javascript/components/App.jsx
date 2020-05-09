@@ -1,12 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import TraigeContainer from '../containers/Triage'
+import TraigeContainer from '../containers/TraigeContainer'
 import SelectingFormValuesForm from './DemographicForm'
 import {Provider} from 'react-redux'
 import {connect} from 'react-redux'
 import QuestionForm from './Questionnaire'
-import DemographicContainer from '../containers/Forms'
+import DemographicContainer from '../containers/DemographicContainer'
+import {withRouter} from 'react-router'
 
 class App extends React.Component{
 
@@ -26,6 +27,5 @@ class App extends React.Component{
         )
     }
 }
-
 
 export default App;

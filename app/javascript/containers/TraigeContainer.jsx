@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 import Button from 'terra-button'
 import fetchTraige from '../actions/getTraige'
 import {bindActionCreators} from 'redux'
+import {withRouter} from 'react-router'
 
 class TriageContainer extends React.Component{    
     constructor(props){
@@ -37,4 +38,4 @@ const mapActionsToProps = (dispatch) => {
   }
 
 
-export default connect(mapStateToProps, mapActionsToProps)(TriageContainer);
+export default withRouter(connect(mapStateToProps, mapActionsToProps)(TriageContainer));

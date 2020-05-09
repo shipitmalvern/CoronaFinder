@@ -1,7 +1,8 @@
 import React from 'react'
-import { Field, reduxForm } from 'redux-form'
 import getQuestions from '../actions/getQuestions'
 import {withRouter} from 'react-router'
+import { connect } from 'react-redux'
+import { Field, reduxForm, formValueSelector } from 'redux-form'
 
 class DemographicForm extends React.Component{
   constructor(props){
