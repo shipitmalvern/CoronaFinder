@@ -7,6 +7,8 @@ import DemographicForm from '../components/DemographicForm'
 import {withRouter} from 'react-router'
 import {formValueSelector } from 'redux-form'
 import saveDemographics from '../actions/saveDemographics'
+import getQuestions  from '../actions/getQuestions'
+
 
 class DemographicContainer extends React.Component{    
     constructor(props){
@@ -17,6 +19,7 @@ class DemographicContainer extends React.Component{
     handleSubmit(){
         console.log("Demographic Submitted!")
         this.props.saveDemographics(this.props.state)
+        this.props.getQuestions(this.props.state)
         this.props.history.push('/questions')
         
     }
@@ -38,8 +41,8 @@ function mapStateToProps(state){
 
 const mapActionsToProps = ( dispatch) => {
     return {
-        saveDemographics: bindActionCreators(saveDemographics, dispatch)
-
+        saveDemographics: bindActionCreators(saveDemographics, dispatch),
+        getQuestions: bindActionCreators(getQuestions, dispatch)
     }
   }
 
