@@ -20,8 +20,14 @@ const fetchQuestionRequestFailure = error => {
     }
 }
 
-const fetchQuestion = (dispatch) => {
+const fetchQuestion = (state) => {
    //We can return a function 
+   console.log("Fetching Questions")
+   const body = {
+       sex: state.form.demographics.values.sex,
+       age: state.form.demographics.values.age,
+       evidences: []
+   }
     return function(dispatch) {
         dispatch(fetchQuestionRequest)
         axios.get('/question')

@@ -3,28 +3,27 @@ import PropTypes from "prop-types"
 import {connect} from 'react-redux'
 import fetchQuestion from '../actions/getQuestions'
 import {bindActionCreators} from 'redux'
-import DemographicForm from '../components/DemographicForm'
+import Questionnaire from "../components/Questionnaire"
 import {withRouter} from 'react-router'
 import {formValueSelector } from 'redux-form'
-import saveDemographics from '../actions/saveDemographics'
+import getQuestions from '../actions/getQuestions'
 
-class DemographicContainer extends React.Component{    
+class QuestionnaireContainer extends React.Component{    
     constructor(props){
         super(props);
         this.handleSubmit= this.handleSubmit.bind(this);
     }
 
     handleSubmit(){
-        console.log("Demographic Submitted!")
-        this.props.saveDemographics(this.props.state)
+        console.log("Questions Submitted!")
+        this.props.getQuestions(this.props.state)
         this.props.history.push('/questions')
         
     }
-   
     render() {
         return(
             <div> 
-            <DemographicForm handleSubmit= {this.handleSubmit}/>
+            <Questionnaire handleSubmit= {this.handleSubmit}/>
             </div>
         )
     }
@@ -38,8 +37,7 @@ function mapStateToProps(state){
 
 const mapActionsToProps = ( dispatch) => {
     return {
-        saveDemographics: bindActionCreators(saveDemographics, dispatch)
-
+        getQuestions: bindActionCreators(getQuestions, dispatch)
     }
   }
 

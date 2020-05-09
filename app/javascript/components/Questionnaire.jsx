@@ -30,7 +30,7 @@ render(){
 
 
       <div>
-        <button type="submit" onClick={this.props.fetchQuestions} disabled={this.props.pristine || this.props.submitting}>
+        <button type="submit" disabled={this.props.pristine || this.props.submitting}>
           Submit
         </button>
         <button type="button" disabled={this.props.pristine || this.props.submitting} onClick={this.props.reset}>
