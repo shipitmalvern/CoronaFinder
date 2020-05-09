@@ -17,7 +17,12 @@ export default function(state=initialState, action){
             var evid = action.state.TraigeResponse.evidence.slice(0)
             console.log(evid)
             for (let [key, value] of Object.entries(symptoms)) {
-                evid.push({"id":key, "choice_id":value})
+                if(key == "group-single"){
+                    evid.push({"id":value, "choice_id":"present"})
+                    
+                  }else{
+                    evid.push({"id":key, "choice_id":value})
+                  }
              }
             return {
                 ...state,

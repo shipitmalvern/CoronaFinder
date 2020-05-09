@@ -43,9 +43,12 @@ const fetchQuestion = (state) => {
     }
     //Push in current answers 
     for (let [key, value] of Object.entries(state.form.questionnaire.values)) {
-      console.log(key)
-      console.log(value)
-      body.evidence.push({"id":key, "choice_id":value})
+      if(key == "group-single"){
+        body.evidence.push({"id":value, "choice_id":"present"})
+        console.log(body.evidence)
+      }else{
+        body.evidence.push({"id":key, "choice_id":value})
+      }
    }
   }
   return function (dispatch) {

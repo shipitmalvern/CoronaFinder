@@ -7,11 +7,10 @@ class Loading extends React.Component{
     constructor(props){
         super(props);
     }
-    componentWillUpdate(){
+    componentDidMount(){
         if(this.props.state.questionsData.loading==false){
             this.props.history.push('/questions')
         }
-        
     }
     render() {
             return(
