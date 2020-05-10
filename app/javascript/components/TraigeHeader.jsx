@@ -5,7 +5,7 @@ import Card from 'terra-card/lib/Card';
 const TraigeHeaderComponent = () => (
     <Card>
       <Card.Body isContentCentered hasPaddingVertical={true} hasPaddingHorizontal={true}>
-         Traige Results
+         Triage Results
       </Card.Body>
     </Card>
   );
