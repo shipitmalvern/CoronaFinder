@@ -7,6 +7,8 @@ export default function(state=false, action){
            return false
          case "TRAIGE":
             return "traige"
+         case "RESULT":
+               return "result"
         default:
            return state
     }

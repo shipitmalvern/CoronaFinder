@@ -13,3 +13,8 @@ export const traige = () => {
         type: "TRAIGE"
     }
 }
+export const result = () => {
+    return {
+        type: "RESULT"
+    }
+}
