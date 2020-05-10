@@ -1,4 +1,5 @@
 import axios from "axios";
+import {load} from '../actions/loadedAction'
 
 const fetchQuestionRequest = () => {
   return {
@@ -60,6 +61,10 @@ const fetchQuestion = (state) => {
         let data = response.data;
         console.log(response);
         dispatch(fetchQuestionRequestSuccess(data));
+        if(response.data.should_stop==false){
+          dispatch(load())
+        }
+        
       })
       .catch((error) => {
         dispatch(fetchQuestionRequestFailure(error.message));
