@@ -20,3 +20,18 @@
     left: 0;
     background:rgb(102, 178, 255)
 }
+
+.Traige{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:rgb(102, 178, 255)
+}
+.Result{
+  background-color: azure;
+  padding: 50px 50px 50px 50px;
+  border-style: solid;
+  border-width: 20px;
+}

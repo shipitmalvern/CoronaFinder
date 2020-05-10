@@ -7,6 +7,8 @@ import Button from 'terra-button'
 import fetchTraige from '../actions/getTraige'
 import {bindActionCreators} from 'redux'
 import {withRouter} from 'react-router'
+import Result from '../components/Result'
+import { Item } from "semantic-ui-react";
 
 class TriageContainer extends React.Component{    
     constructor(props){
@@ -14,13 +16,19 @@ class TriageContainer extends React.Component{
     }
     render() {
         return(
-            <div> 
+            <div className= "Traige"> 
                 <TraigeHeaderComponent/>
-                <TraigeComponent label= "Description" value = {this.props.userResult.userResult.description}/>
-                <TraigeComponent label = "Label "   value = {this.props.userResult.userResult.label}/>
-                <TraigeComponent label = "Triage Level " value = {this.props.userResult.userResult.triage_level} />
-                {/* <TraigeComponent label = "Seriousness " value = {this.props.userResult.userResult.serious[0].common_name}/> */}
-                <Button text="Submit" type="submit" onClick={this.props.fetchTraige} />
+                <Item.Group relaxed>
+                <div className="Result">
+                <Result label= "Description" value= {this.props.userResult.userResult.description} />
+                </div>
+                <div className="Result">
+                <Result className="Result"  label= "Label" value= {this.props.userResult.userResult.label} />
+                </div>
+                <div className="Result">
+                <Result className="Result"  label= "Description" value= {this.props.userResult.userResult.triage_level} />
+                </div>
+                </Item.Group>
             </div>
         )
     }
