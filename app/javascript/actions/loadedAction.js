@@ -8,3 +8,8 @@ export const unload = () => {
         type: "UNLOAD"
     }
 }
+export const traige = () => {
+    return {
+        type: "TRAIGE"
+    }
+}

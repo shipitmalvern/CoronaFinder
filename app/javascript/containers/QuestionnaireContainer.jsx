@@ -8,6 +8,7 @@ import {withRouter} from 'react-router'
 import {formValueSelector } from 'redux-form'
 import getQuestions from '../actions/getQuestions'
 import {updateSymptoms } from '../actions/makeTraigeResponse'
+import {unload} from '../actions/loadedAction'
 
 class QuestionnaireContainer extends React.Component{    
     constructor(props){
@@ -19,6 +20,9 @@ class QuestionnaireContainer extends React.Component{
         this.props.getQuestions(this.props.state)
         this.props.updateSymptoms(this.props.state)
         this.props.history.push('/loading')
+    }
+    componentDidUpdate(){
+        this.props.unload()
     }
     render() {
         return(
@@ -38,7 +42,8 @@ function mapStateToProps(state){
 const mapActionsToProps = ( dispatch) => {
     return {
         getQuestions: bindActionCreators(getQuestions, dispatch),
-        updateSymptoms: bindActionCreators(updateSymptoms, dispatch)
+        updateSymptoms: bindActionCreators(updateSymptoms, dispatch),
+        unload: bindActionCreators(unload, dispatch)
     }
   }
 

@@ -5,6 +5,8 @@ export default function(state=false, action){
            return true
         case "UNLOAD":
            return false
+         case "TRAIGE":
+            return "traige"
         default:
            return state
     }

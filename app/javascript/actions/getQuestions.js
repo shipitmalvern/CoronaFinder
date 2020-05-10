@@ -1,5 +1,5 @@
 import axios from "axios";
-import {load} from '../actions/loadedAction'
+import {load, traige} from '../actions/loadedAction'
 
 const fetchQuestionRequest = () => {
   return {
@@ -16,7 +16,7 @@ const fetchQuestionRequestSuccess = (data) => {
 
 const fetchQuestionRequestFailure = (error) => {
   return {
-    type: "FETCH_QUESTION_REQUEST_SUCCESS",
+    type: "FETCH_QUESTION_REQUEST_FAILURE",
     payload: error,
   };
 };
@@ -63,6 +63,8 @@ const fetchQuestion = (state) => {
         dispatch(fetchQuestionRequestSuccess(data));
         if(response.data.should_stop==false){
           dispatch(load())
+        }else{
+          dispatch(traige())
         }
         
       })

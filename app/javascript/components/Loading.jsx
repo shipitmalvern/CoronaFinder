@@ -8,28 +8,33 @@ import {bindActionCreators} from 'redux'
 class Loading extends React.Component{    
     constructor(props){
         super(props);
-        this.handleNext = this.handleNext.bind(this)
+        this.state= {
+            loaded: this.props.loaded
+        }
+        // this.forceUpdateHandler = this.forceUpdateHandler.bind(this);
+    }
+    componentDidUpdate(){
+        if(this.props.loaded == true){
+                this.props.history.push('/questions')
+        }else if(this.props.loaded == "traige"){
+            this.props.history.push('/result')
+        }
+    }
 
-    }
-    handleNext(){
-            console.log("Here ")
-            console.log(this.props.state)
-            this.props.unload()
-            this.props.history.push('/questions')
-    }
     render() {
-            if(this.props.state.loaded =! true){
-                return(
-                    <div className="Loading" ><ReactLoading type="bubbles" color="#fff" height="70%" width="70%"/> </div>
-                )
-            }
-            else{
-                this.handleNext()
-                return(
-                    <div className="Loading" ><ReactLoading type="bubbles" color="#fff" height="70%" width="70%"/> </div>
-                )
-            }
-            
+        this.state.loaded= this.props.loaded
+        if(this.props.loaded == false){
+            return(
+                <div className="Loading" ><ReactLoading type="bubbles" color="#fff" height="70%" width="70%"/> </div>
+            )
+        }else{
+            return(
+                <div className="Loading" ><ReactLoading type="bubbles" color="#fff" height="70%" width="70%"/> </div>
+            ) 
+        }
+        
+    
+        
     }
 }
 const mapActionsToProps = (dispatch) => {
@@ -40,9 +45,9 @@ const mapActionsToProps = (dispatch) => {
   
 function mapStateToProps(state){
     return{
-        state: state
+        loaded: state.loaded
     };
 }
-export default withRouter(connect(mapActionsToProps, mapStateToProps)(Loading));
+export default withRouter(connect(mapStateToProps, mapActionsToProps)(Loading));
 
   
