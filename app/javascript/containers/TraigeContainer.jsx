@@ -24,7 +24,10 @@ class TriageContainer extends React.Component{
                 <Result label= "Label" value= {this.props.userResult.userResult.label} />
                 </div>
                 </Item.Group>
+                <h1>Find A Testing Center </h1>
+                 <iframe src="https://covid-19-apis.postman.com/covid-19-testing-locations/" height="500" width="100%"></iframe>
             </div>
+        
         )
     }
 }
