@@ -1,5 +1,6 @@
 import React from "react";
 import { Item } from "semantic-ui-react";
+import { Header, Segment } from 'semantic-ui-react'
 
 class Result extends React.Component {
   constructor(props) {
@@ -8,12 +9,14 @@ class Result extends React.Component {
 
   render() {
     return (
-        <Item>
-          <Item.Content verticalAlign="middle">
-            <Item.Header>{this.props.label}</Item.Header>
-            <Item.Description>{this.props.value}</Item.Description>
-          </Item.Content>
-        </Item>
+      <div>
+    <Header as='h2' attached='top'>
+    {this.props.label}
+    </Header>
+    <Segment attached>
+    {this.props.value}
+    </Segment>
+  </div>
     );
   }
 }

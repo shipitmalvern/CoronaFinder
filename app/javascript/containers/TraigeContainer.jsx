@@ -21,12 +21,7 @@ class TriageContainer extends React.Component{
                 <Item.Group relaxed>
                 <div className="Result">
                 <Result label= "Description" value= {this.props.userResult.userResult.description} />
-                </div>
-                <div className="Result">
                 <Result label= "Label" value= {this.props.userResult.userResult.label} />
-                </div>
-                <div className="Result">
-                <Result label= "Triage Level" value= {this.props.userResult.userResult.triage_level} />
                 </div>
                 </Item.Group>
             </div>

@@ -18,3 +18,8 @@ export const result = () => {
         type: "RESULT"
     }
 }
+export const news = () => {
+    return {
+        type: "NEWS"
+    }
+}

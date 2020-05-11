@@ -19,7 +19,10 @@ const store = createStore(
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
       <Provider store ={store}>
-          <App/>
+        <div className="back">
+        <App/>
+        </div>
+          
       </Provider>,
     document.body.appendChild(document.createElement('div')),
   )

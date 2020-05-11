@@ -3,6 +3,7 @@ import getQuestions from '../actions/getQuestions'
 import {withRouter} from 'react-router'
 import { connect } from 'react-redux'
 import { Field, reduxForm, formValueSelector } from 'redux-form'
+import { Header } from 'semantic-ui-react'
 
 class DemographicForm extends React.Component{
   constructor(props){
@@ -12,6 +13,10 @@ class DemographicForm extends React.Component{
 render(){
   return (
     <form className= "form" onSubmit={this.props.handleSubmit}>
+    
+    <Header as='h3' dividing>
+      Questionnaire
+  </Header>
     <fieldset>
     <legend>Demographics:</legend>
       <div>
