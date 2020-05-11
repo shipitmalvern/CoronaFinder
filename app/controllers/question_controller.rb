@@ -11,7 +11,6 @@ class QuestionController < ApplicationController
             req.headers['App-Key'] = '2de88eb85d8e113ff6e8bc340fa9cc14'
             req.body = question_response.to_json
         end
-        # binding.pry
         render json: response.body
     end
 end
