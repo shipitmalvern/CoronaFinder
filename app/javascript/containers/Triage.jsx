@@ -1,27 +1,44 @@
-import React from "react"
+import React,{ useEffect } from "react"
 import PropTypes from "prop-types"
-import TraigeHeaderComponent from "../components/traige_header_component"
-import TraigeComponent from "../components/traige_component"
-import axios from 'axios'
-import {bindActionCreators} from 'redux'
+import TriageHeaderComponent from "../components/TriageHeader"
 import {connect} from 'react-redux'
+import fetchTriage from '../actions/getTriage'
+import {bindActionCreators} from 'redux'
+import {withRouter} from 'react-router'
+import Result from '../components/Result'
+import { Item } from "semantic-ui-react";
+
 class TriageContainer extends React.Component{    
+    constructor(props){
+        super(props)
+    }
     render() {
         return(
-            <div>
-                <TraigeHeaderComponent/>
-                <TraigeComponent label= "Description" value = {this.props.userResult.description}/>
-                <TraigeComponent label = "Label "   value = {this.props.userResult.label}/>
-                <TraigeComponent label = "Triage Level " value = {this.props.userResult.triage_level} />
-                <TraigeComponent label = "Seriousness " value = {this.props.userResult.serious[0].common_name}/>
+            <div className= "Triage"> 
+                <TriageHeaderComponent/>
+                <Item.Group relaxed>
+                <div className="Result">
+                <Result label= "Description" value= {this.props.userResult.userResult.description} />
+                <Result label= "Label" value= {this.props.userResult.userResult.label} />
+                </div>
+                </Item.Group>
+                <h1>Find A Testing Center </h1>
+                 <iframe src="https://covid-19-apis.postman.com/covid-19-testing-locations/" height="500" width="100%"></iframe>
             </div>
+        
         )
     }
 }
-//Grabs user result state and maps to this component, will need questionnaire component to make api call and update traige result
 function mapStateToProps(state){
     return{
         userResult: state.userResult
     };
 }
-export default connect(mapStateToProps)(TriageContainer);
+const mapActionsToProps = (dispatch) => {
+    return {
+      fetchTriage: bindActionCreators(fetchTriage, dispatch),
+    }
+  }
+
+
+export default withRouter(connect(mapStateToProps, mapActionsToProps)(TriageContainer));
