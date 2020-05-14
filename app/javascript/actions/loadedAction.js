@@ -8,9 +8,9 @@ export const unload = () => {
         type: "UNLOAD"
     }
 }
-export const traige = () => {
+export const triage = () => {
     return {
-        type: "TRAIGE"
+        type: "TRIAGE"
     }
 }
 export const result = () => {

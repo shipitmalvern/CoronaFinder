@@ -7,7 +7,7 @@ import Questionnaire from "../components/Questionnaire"
 import {withRouter} from 'react-router'
 import {formValueSelector } from 'redux-form'
 import getQuestions from '../actions/getQuestions'
-import {updateSymptoms } from '../actions/makeTraigeResponse'
+import {updateSymptoms } from '../actions/makeTriageResponse'
 import {unload} from '../actions/loadedAction'
 
 class QuestionnaireContainer extends React.Component{    

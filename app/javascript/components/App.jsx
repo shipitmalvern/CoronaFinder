@@ -1,13 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import TraigeContainer from '../containers/TraigeContainer'
-import SelectingFormValuesForm from './DemographicForm'
-import {Provider} from 'react-redux'
-import {connect} from 'react-redux'
-import QuestionnaireContainer from '../containers/QuestionnaireContainer'
-
-import DemographicContainer from '../containers/DemographicContainer'
+import TriageContainer from '../containers/Triage'
+import QuestionnaireContainer from '../containers/Questionnaire'
+import DemographicContainer from '../containers/Demographics'
 import {withRouter} from 'react-router'
 import Loading from '../components/Loading'
 class App extends React.Component{
@@ -21,7 +17,7 @@ class App extends React.Component{
                     <Route exact path ="/" render={() => <DemographicContainer/>}/>
                     <Route exact path ="/questions" render={() => <QuestionnaireContainer/>}/>
                     <Route exact path ="/loading" render={() => <Loading/>}/>
-                    <Route exact path ="/result" render={() => <TraigeContainer/>}/>
+                    <Route exact path ="/result" render={() => <TriageContainer/>}/>
                 </Switch>
             </BrowserRouter>
         )

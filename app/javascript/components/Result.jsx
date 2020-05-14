@@ -1,5 +1,4 @@
 import React from "react";
-import { Item } from "semantic-ui-react";
 import { Header, Segment } from 'semantic-ui-react'
 
 class Result extends React.Component {

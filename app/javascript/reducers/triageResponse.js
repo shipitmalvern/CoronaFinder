@@ -14,7 +14,7 @@ export default function(state=initialState, action){
             }
         case "UPDATE_SYMPTOMS":
             var symptoms= action.state.form.questionnaire.values
-            var evid = action.state.TraigeResponse.evidence.slice(0)
+            var evid = action.state.TriageResponse.evidence.slice(0)
             console.log(evid)
             for (let [key, value] of Object.entries(symptoms)) {
                 if(key == "group-single"){

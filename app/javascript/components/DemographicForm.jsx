@@ -1,8 +1,6 @@
 import React from 'react'
-import getQuestions from '../actions/getQuestions'
 import {withRouter} from 'react-router'
-import { connect } from 'react-redux'
-import { Field, reduxForm, formValueSelector } from 'redux-form'
+import { Field, reduxForm} from 'redux-form'
 import { Header } from 'semantic-ui-react'
 
 class DemographicForm extends React.Component{

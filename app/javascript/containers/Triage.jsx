@@ -1,10 +1,8 @@
 import React,{ useEffect } from "react"
 import PropTypes from "prop-types"
-import TraigeHeaderComponent from "../components/TraigeHeader"
-import TraigeComponent from "../components/Traige"
+import TriageHeaderComponent from "../components/TriageHeader"
 import {connect} from 'react-redux'
-import Button from 'terra-button'
-import fetchTraige from '../actions/getTraige'
+import fetchTriage from '../actions/getTriage'
 import {bindActionCreators} from 'redux'
 import {withRouter} from 'react-router'
 import Result from '../components/Result'
@@ -16,8 +14,8 @@ class TriageContainer extends React.Component{
     }
     render() {
         return(
-            <div className= "Traige"> 
-                <TraigeHeaderComponent/>
+            <div className= "Triage"> 
+                <TriageHeaderComponent/>
                 <Item.Group relaxed>
                 <div className="Result">
                 <Result label= "Description" value= {this.props.userResult.userResult.description} />
@@ -31,7 +29,6 @@ class TriageContainer extends React.Component{
         )
     }
 }
-//Grabs user result state and maps to this component, will need questionnaire component to make api call and update traige result
 function mapStateToProps(state){
     return{
         userResult: state.userResult
@@ -39,7 +36,7 @@ function mapStateToProps(state){
 }
 const mapActionsToProps = (dispatch) => {
     return {
-      fetchTraige: bindActionCreators(fetchTraige, dispatch),
+      fetchTriage: bindActionCreators(fetchTriage, dispatch),
     }
   }
 

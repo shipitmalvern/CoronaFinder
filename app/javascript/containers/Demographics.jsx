@@ -6,7 +6,7 @@ import {bindActionCreators} from 'redux'
 import DemographicForm from '../components/DemographicForm'
 import {withRouter} from 'react-router'
 import getQuestions  from '../actions/getQuestions'
-import {saveDemoData} from '../actions/makeTraigeResponse'
+import {saveDemoData} from '../actions/makeTriageResponse'
 import News from '../components/News'
 import getNews from '../actions/getNews'
 import { Item } from "semantic-ui-react";

@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {withRouter} from 'react-router'
 import ReactLoading from 'react-loading'
 import {unload} from '../actions/loadedAction'
-import fetchTraige from '../actions/getTraige'
+import fetchTriage from '../actions/getTriage'
 import {bindActionCreators} from 'redux'
 
 class Loading extends React.Component{    
@@ -16,8 +16,8 @@ class Loading extends React.Component{
     componentDidUpdate(){
         if(this.props.loaded == true){
                 this.props.history.push('/questions')
-        }else if(this.props.loaded == "traige"){
-            this.props.fetchTraige(this.props.state)
+        }else if(this.props.loaded == "triage"){
+            this.props.fetchTriage(this.props.state)
         }else if(this.props.loaded == "result"){
             this.props.history.push('/result')
         }
@@ -40,7 +40,7 @@ class Loading extends React.Component{
 const mapActionsToProps = (dispatch) => {
     return {
         unload: bindActionCreators(unload, dispatch),
-        fetchTraige: bindActionCreators(fetchTraige, dispatch)
+        fetchTriage: bindActionCreators(fetchTriage, dispatch)
     }
   }
   

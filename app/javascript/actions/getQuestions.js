@@ -1,5 +1,5 @@
 import axios from "axios";
-import {load, traige} from '../actions/loadedAction'
+import {load, triage} from '../actions/loadedAction'
 
 const fetchQuestionRequest = () => {
   return {
@@ -29,7 +29,7 @@ const fetchQuestion = (state) => {
   };
   var body;
   //Means first time getting questions
-  if (state.TraigeResponse.sex == undefined) {
+  if (state.TriageResponse.sex == undefined) {
     body = {
       sex: state.form.demographic.values.sex,
       age: state.form.demographic.values.age,
@@ -38,9 +38,9 @@ const fetchQuestion = (state) => {
   } else {
     //Means other time getting questions
     body = {
-      sex: state.TraigeResponse.sex,
-      age: state.TraigeResponse.age,
-      evidence: state.TraigeResponse.evidence.slice(0)
+      sex: state.TriageResponse.sex,
+      age: state.TriageResponse.age,
+      evidence: state.TriageResponse.evidence.slice(0)
     }
     //Push in current answers 
     for (let [key, value] of Object.entries(state.form.questionnaire.values)) {
@@ -64,7 +64,7 @@ const fetchQuestion = (state) => {
         if(response.data.should_stop==false){
           dispatch(load())
         }else{
-          dispatch(traige())
+          dispatch(triage())
         }
         
       })
