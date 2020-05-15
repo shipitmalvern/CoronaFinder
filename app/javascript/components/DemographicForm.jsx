@@ -12,11 +12,11 @@ render(){
   return (
     <form className= "form" onSubmit={this.props.handleSubmit}>
     
-    <Header as='h3' dividing>
-      Questionnaire
+    <Header as='h1' dividing>
+      Covid19 Questionnaire
   </Header>
     <fieldset>
-    <legend>Demographics:</legend>
+    <legend>Please Enter Your Details:</legend>
       <div>
         <label>Sex</label>
         <div>
@@ -29,6 +29,7 @@ render(){
             />{' '}
             Male
           </label>
+          &nbsp;&nbsp;
           <label>
             <Field
               name="sex"
@@ -42,6 +43,7 @@ render(){
       </div>
       <div>
         <label>Age</label>
+        <br></br>
         <div>
           <Field
               name="age"
@@ -51,10 +53,12 @@ render(){
             />  
         </div>
       </div>
+      <br></br>
       <div>
         <button type="submit" disabled={this.props.pristine || this.props.submitting}>
           Submit
         </button>
+        &nbsp;&nbsp;
         <button type="button" disabled={this.props.pristine || this.props.submitting} onClick={this.props.reset}>
           Clear Values
         </button>

@@ -10,7 +10,7 @@ class News extends React.Component {
   render() {
     return (
       <Item>
-      <Item.Image size='medium' src={this.props.urlToImage} />
+      <Item.Image size='small' src={this.props.urlToImage} />
 
       <Item.Content>
         <Item.Header as='a'>{this.props.title}</Item.Header>
