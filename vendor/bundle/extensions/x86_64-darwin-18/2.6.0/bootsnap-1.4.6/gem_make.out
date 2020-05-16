@@ -1,0 +1,15 @@
+current directory: /Users/ds070111/Documents/GitHub/CoronaFinder/vendor/bundle/gems/bootsnap-1.4.6/ext/bootsnap
+/Users/ds070111/.rvm/rubies/ruby-2.6.0/bin/ruby -I /Users/ds070111/.rvm/rubies/ruby-2.6.0/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200515-65575-xupen4.rb extconf.rb
+creating Makefile
+
+current directory: /Users/ds070111/Documents/GitHub/CoronaFinder/vendor/bundle/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/ds070111/Documents/GitHub/CoronaFinder/vendor/bundle/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/ds070111/Documents/GitHub/CoronaFinder/vendor/bundle/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20200515-65575-me4dmr/bootsnap
