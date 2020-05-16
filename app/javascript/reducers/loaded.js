@@ -5,8 +5,8 @@ export default function(state=false, action){
            return true
         case "UNLOAD":
            return false
-         case "TRIAGE":
-            return "triage"
+         case "TRAIGE":
+            return "traige"
          case "RESULT":
             return "result"
          case "NEWS":

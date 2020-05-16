@@ -9,16 +9,16 @@ import ReactLoading from "react-loading";
 class Questionnaire extends React.Component {
   constructor(props) {
     super(props);
-    this.handleTriage = this.handleTriage.bind(this);
+    this.handleTraige = this.handleTraige.bind(this);
   }
-  handleTriage() {
+  handleTraige() {
     this.props.history.push("/result");
   }
   render() {
     //Three scenarios, single, group-single, group-multiple
     const questionsData = this.props.state.questionsData;
     if (questionsData.questions !=undefined &&  questionsData.questions.question == null) {
-      this.handleTriage;
+      this.handleTraige;
     } else {
       if (this.props.state.questionsData.questions == undefined) {
         return <ReactLoading type="balls" color="#fff" />;

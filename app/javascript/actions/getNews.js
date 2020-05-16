@@ -35,7 +35,7 @@ const fetchNews = (state) => {
       .then((response) => {
         //successful
         let data = response.data;
-        data= data.articles.slice(0,5)
+        data= data.articles.slice(0,7)
         dispatch(fetchNewsRequestSuccess(data));
         dispatch(news())
       })

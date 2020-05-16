@@ -1,14 +1,14 @@
 import {combineReducers} from 'redux'
-import UserResultReducer from './triageResult'
+import UserResultReducer from './userResult'
 import questionsData from './questions'
-import TriageResponseReducer from './triageResponse'
+import TraigeResponseReducer from './traigeReducer'
 import loaded from './loaded'
 import { reducer as formReducer } from 'redux-form'
-import News from './news'
+import News from '../reducers/NewsReducer'
 
 const allReducers = combineReducers({
     userResult: UserResultReducer,
-    TriageResponse: TriageResponseReducer,
+    TraigeResponse: TraigeResponseReducer,
     questionsData: questionsData,
     loaded: loaded,
     News: News,

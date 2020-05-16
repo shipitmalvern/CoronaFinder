@@ -12,7 +12,7 @@ import thunkMiddleware from 'redux-thunk'
 
 const store = createStore(
   allReducers, 
-  composeWithDevTools(applyMiddleware(thunkMiddleware))
+  applyMiddleware(thunkMiddleware)
 )
 
 
